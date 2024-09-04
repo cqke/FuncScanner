@@ -7,6 +7,9 @@ PLUGIN_NAME       =  "FuncScanner"
 FUNC_CHOOSER = None
 POPUP_ACTIONS = ["Rescan Database"]
 
+# set recursion limit higher to analyse large binaries
+sys.setrecursionlimit(999)
+
 class FunctionExtInfo():
     def __init__(self, ea, xref_count, loop_count, nodes, nodes_total):
         self.ea = ea
